@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moveable Text Editor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Moveable Text Editor</h1>
+            <p>Add and move text anywhere on your image</p>
+        </div>
+        
+        <div class="main-content">
+            <div class="slider">
+  <div class="slides">
+    <!-- slide 1 -->
+    <div class="slide">
+      <img
+        src="images/562059.jpg"
+        alt="Sample Image"
+      />
+      <div class="text-overlay" style="top:50px;left:50px;">
+        <div class="text-content">Click to edit this text</div>
+      </div>
+    </div>
+
+    <!-- slide 2 -->
+    <div class="slide">
+      <img
+        src="images/image.png"
+        alt="Sample Image"
+      />
+      <div class="text-overlay" style="top:50px;left:50px;">
+        <div class="text-content">Click to edit this text</div>
+      </div>
+    </div>
+
+    <!-- slide 3 -->
+    <div class="slide">
+      <img
+        src="images/Taj_Mahal_Mosque_Agra_India_Uttar_Pradesh_513727_1920x1080.jpg"
+        alt="Sample Image"
+      />
+      <div class="text-overlay" style="top:50px;left:50px;">
+        <div class="text-content">Click to edit this text</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- navigation -->
+  <button class="prev">&#10094;</button>
+  <button class="next">&#10095;</button>
+
+  <!-- dots -->
+  <div class="dots"></div>
+</div>
+
+            
+            <div class="controls-panel">
+                <div class="instructions">
+                    <p><strong>How to use:</strong><br>
+                    • Click on text to select it<br>
+                    • Drag text to move it around<br>
+                    • Use controls to customize appearance<br>
+                    • Add new text with the button below</p>
+                </div>
+
+                <div class="control-group">
+                    <label>Text Content:</label>
+                    <input type="text" id="textContent" class="text-input" value="Click to edit this text">
+                </div>
+                
+                <div class="control-group">
+                    <label>Font Size: <span class="range-value" id="fontSizeValue">24px</span></label>
+                    <input type="range" id="fontSize" class="range-input" min="12" max="72" value="24">
+                </div>
+                
+                <div class="control-group">
+                    <label>Font Weight:</label>
+                    <select id="fontWeight" class="select-input">
+                        <option value="normal">Normal</option>
+                        <option value="bold" selected>Bold</option>
+                        <option value="bolder">Bolder</option>
+                    </select>
+                </div>
+                
+                <div class="control-group">
+                    <label>Text Color:</label>
+                    <input type="color" id="textColor" class="color-input" value="#ffffff">
+                </div>
+                
+                <div class="control-group">
+                    <label>Font Family:</label>
+                    <select id="fontFamily" class="select-input">
+                        <option value="Arial, sans-serif">Arial</option>
+                        <option value="Georgia, serif">Georgia</option>
+                        <option value="'Times New Roman', serif">Times New Roman</option>
+                        <option value="'Courier New', monospace">Courier New</option>
+                        <option value="Impact, sans-serif">Impact</option>
+                    </select>
+                </div>
+                
+                <button class="btn" onclick="addNewText()">Add New Text</button>
+                <button class="btn btn-secondary" onclick="deleteSelectedText()">Delete Selected Text</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script1.js"></script>
+</body>
+</html>
